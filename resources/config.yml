@@ -12,6 +12,6 @@ max-X-Cord: 3000
 ## Minimum Wild Location on X Cordinate.
 min-X-Cord: 200
 ## Maximum Wild Location on Y Cordiante.
-max-Y-Cord: 3000
+max-Z-Cord: 3000
 ## Minimum Wild Location on Y Cordinate.
-min-Y-Cord: 200
+min-Z-Cord: 200
