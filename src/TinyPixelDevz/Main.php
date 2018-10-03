@@ -36,11 +36,11 @@ class Main extends PluginBase implements Listener{
             $x = rand($min_X_Cord,$max_X_Cord);
             $y = 128;
             $z = rand($min_Z_Cord,$max_Z_Cord);
-		$level = Server::getInstance()->getConfig()->getNested("World");
+		$level = Server::getInstance()->getConfig("World");
 		//LINE 32 needs to be checkd that what the error is should be easy im just tired xD
             $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $level)));
-            $s->addTitle->getConfig()->getNested("Name");
-	    $s->sendMessage->getConfig()->getNested("Text");
+            $s->addTitle->getConfig("Name");
+	    $s->sendMessage->getConfig("Text");
             $this->iswildin[$s->getName()] = true;
         
         }
