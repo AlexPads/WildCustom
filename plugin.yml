@@ -1,0 +1,9 @@
+name: CustomWild
+main: TinyPixelDevz\Main
+version: 1.0.0
+api: [3.0.0, 4.0.0]
+author: TinyPixelDevz
+website: tinypixel.ga
+commands:
+ wild:
+  description: Teleports you in a random place!
