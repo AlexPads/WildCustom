@@ -18,9 +18,7 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
               $this->getServer()->getPluginManager()->registerEvents($this, $this);
               $this->getLogger()->info(TF::GREEN . "Wild enabled!");
-	    if(!is_dir($this->getDataFolder())){
-			mkdir($this->getDataFolder());
-	    $this->saveDefaultConfig();
+			  
     }
     public function onDisable(){
               $this->getLogger()->info(TF::RED . "Wild disabled!");
@@ -29,23 +27,23 @@ class Main extends PluginBase implements Listener{
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args) : bool{
     if(strtolower($cmd->getName() == "wild")){
         if($s instanceof Player){
-		$minX = $this->getConfig()->get("min_X_Cord");
-		$maxX = $this->getConfig()->get("max_X_Cord");
-		$minZ = $this->getConfig()->get("min_Z_Cord");
-		$maxZ = $this->getConfig()->get("max_Z_Cord");
-            $x = rand($min_X_Cord,$max_X_Cord);
+		$minxcord = $this->getConfig()->get("minxcord");
+		$maxxcord = $this->getConfig()->get("maxxcord");
+		$minzcord = $this->getConfig()->get("minzcord");
+		$maxzcord = $this->getConfig()->get("maxzcord");
+            $x = rand($minxcord,$maxxcord);
             $y = 128;
-            $z = rand($min_Z_Cord,$max_Z_Cord);
-		$level = Server::getInstance()->getConfig("World");
-		//LINE 32 needs to be checkd that what the error is should be easy im just tired xD
-            $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $level)));
-            $s->addTitle->getConfig("Name");
-	    $s->sendMessage->getConfig("Text");
+            $z = rand($minzcord,$maxzcord);
+		$world = $this->getConfig()->get("World");
+		$level = Server::getInstance()->getLevelByName($world);
+            $s->teleport(new Position($x, $y, $z, $level));
+            $s->addTitle($this->getConfig()->get("Name"));
+	    $s->sendMessage($this->getConfig()->get("Text"));
             $this->iswildin[$s->getName()] = true;
         
         }
         }else{
-            $s->sendMessage(TF::RED."You dont have permission");
+            $s->sendMessage($this->getConfig()->get("no_permission"));
         }
         return true;
     } 

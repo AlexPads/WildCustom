@@ -2,16 +2,31 @@
 ## Please dont copy this is property of TinyPixelDevz Team!
 ## Website TinyPixel.ga
 ## What the Main Title on /wild says!
-Name: Teleporting to random Location!
+
+Name: §a§lTeleporting...
+
 ## Small text under title
-Text: Make sure to Build Fast!
+
+Text: §4Tiny§aPixel §6>§4>§f Quick! Make a Base!
+
 ## world to run the command in 
+
 World: world
-## Maximum Wild location on X Cordinate.
-max-X-Cord: 3000
-## Minimum Wild Location on X Cordinate.
-min-X-Cord: 200
-## Maximum Wild Location on Y Cordiante.
-max-Z-Cord: 3000
-## Minimum Wild Location on Y Cordinate.
-min-Z-Cord: 200
+
+## Minimum Wild location on X Cordinate.
+
+minxcord: 200
+
+## Maximum Wild Location on X Cordinate.
+
+maxxcord: 3000
+
+## Minimum Wild Location on Y Cordiante.
+
+minzcord: 200
+
+## Maximum Wild Location on Y Cordinate.
+
+maxzcord: 3000
+
+## Thanks For Downloading CustomWild!
