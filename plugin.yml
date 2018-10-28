@@ -1,7 +1,7 @@
 name: CustomWild
-main: TinyPixelDevz\Main
-version: 1.0.0
-api: [3.0.0, 4.0.0]
+main: TinyPixelDevz\AlexPads\Wild
+version: 1.0.1
+api: [3.0.0]
 author: TinyPixelDevz
 website: tinypixel.ga
 commands:
